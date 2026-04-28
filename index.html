@@ -87,7 +87,15 @@ body{font-family:'Lato',sans-serif;font-weight:400;font-size:16px;line-height:1.
 .category-status{font-family:'Lato',sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase}
 .results-footer{margin-top:40px;padding-top:20px;border-top:1px solid var(--border-subtle);text-align:center;width:100%}
 .results-footer p{font-size:12px;color:var(--text-muted);letter-spacing:1px}
-@media(max-width:480px){.screen{padding:30px 16px}.question-screen{padding-top:70px}.option-btn{padding:12px 14px;font-size:13px}.category-card{padding:18px}.welcome-stats{gap:24px}.welcome-title{font-size:clamp(32px,8vw,56px)}}
+.lead-hero-bg{position:relative;width:100vw;margin-left:calc(50% - 50vw);margin-bottom:40px;min-height:520px;display:flex;align-items:center;justify-content:center;background-image:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.75)),url('./0314.png');background-size:cover;background-position:center;background-repeat:no-repeat;padding:60px 20px}
+.lead-hero-content{max-width:640px;text-align:center;display:flex;flex-direction:column;align-items:center}
+.authority-grid{display:grid;grid-template-columns:140px 1fr;gap:20px;align-items:flex-start}
+.authority-portrait{width:140px;height:140px;background-image:url('./IMG_5485.jpg');background-size:cover;background-position:center;border:1px solid var(--amber);flex-shrink:0}
+.tick-list{list-style:none;padding:0;margin:0}
+.tick-list li{padding:10px 0;color:var(--text-secondary);font-size:14px;line-height:1.6;display:flex;align-items:flex-start;gap:12px;border-bottom:1px solid var(--border-subtle)}
+.tick-list li:last-child{border-bottom:none}
+.tick-list li::before{content:"\2713";color:var(--amber);font-weight:700;font-size:16px;flex-shrink:0;line-height:1.4}
+@media(max-width:480px){.screen{padding:30px 16px}.question-screen{padding-top:70px}.option-btn{padding:12px 14px;font-size:13px}.category-card{padding:18px}.welcome-stats{gap:24px}.welcome-title{font-size:clamp(32px,8vw,56px)}.lead-hero-bg{min-height:440px;padding:40px 16px}.authority-grid{grid-template-columns:100px 1fr;gap:16px}.authority-portrait{width:100px;height:100px}}
 </style>
 </head>
 <body>
@@ -101,27 +109,34 @@ body{font-family:'Lato',sans-serif;font-weight:400;font-size:16px;line-height:1.
 </div>
 
 <!-- LEAD HERO — shown when no ?client param -->
-<div id="leadHero" class="container" style="text-align:center;display:none;flex-direction:column;align-items:center">
-<h1 class="welcome-title">[TO BUILD — Copy Project: <span>Pain-focused hero title</span>]</h1>
+<div id="leadHero" class="lead-hero-bg" style="display:none">
+<div class="lead-hero-content">
+<h1 class="welcome-title" style="white-space:normal"><span>You haven't LOST it.</span> Just buried it.</h1>
 <div class="welcome-subtitle">Tommy Holland Coaching</div>
-<p class="welcome-text">[TO BUILD — Copy Project: Pain-focused hook paragraph. 2-3 sentences calling out what the lead is struggling with right now.]</p>
+<p class="welcome-text">You used to be fit. Disciplined. Organised. Then life got messy. Everyone else came first. Now you've drifted, and you don't know where to start pulling it back.</p>
+</div>
 </div>
 
 <!-- LEAD AUTHORITY BLOCK -->
 <div id="leadAuthority" class="container" style="display:none;max-width:640px;margin:40px auto;padding:28px 24px;background:rgba(255,255,255,.03);border-left:3px solid var(--amber);text-align:left">
-<h3 style="font-family:'Archivo Black',sans-serif;font-size:14px;letter-spacing:2px;text-transform:uppercase;color:var(--amber);margin-bottom:16px">[TO BUILD — Copy Project: Authority heading]</h3>
-<p style="font-size:15px;line-height:1.7;color:var(--text-secondary)">[TO BUILD — Copy Project: Authority paragraph. Who Tommy is, why he's qualified to help, what makes this different.]</p>
+<div class="authority-grid">
+<div class="authority-portrait" role="img" aria-label="Tommy Holland"></div>
+<div>
+<h3 style="font-family:'Archivo Black',sans-serif;font-size:14px;letter-spacing:2px;text-transform:uppercase;color:var(--amber);margin-bottom:12px">I'VE BEEN THERE</h3>
+<p style="font-size:15px;line-height:1.7;color:var(--text-secondary)">I've had my identity stripped three times. When my rugby career ended, the athlete went with it. When my gym collapsed, my purpose went with it. When I became a dad, what was left went with it too. The system I coach with now is the exact one I built to put myself back together.</p>
+</div>
+</div>
 </div>
 
 <!-- LEAD "WHAT YOU'LL DISCOVER" BLOCK -->
 <div id="leadDiscover" class="container" style="display:none;max-width:640px;margin:40px auto;padding:28px 24px;background:rgba(232,116,12,.08);border:1px solid var(--amber);border-left:3px solid var(--amber);text-align:left">
-<h3 style="font-family:'Archivo Black',sans-serif;font-size:14px;letter-spacing:2px;text-transform:uppercase;color:var(--white);margin-bottom:16px">[TO BUILD — Copy Project: "What you'll discover" heading]</h3>
-<p style="font-size:15px;line-height:1.7;color:var(--text-secondary);margin-bottom:12px">[TO BUILD — Copy Project: Intro line]</p>
-<ul style="list-style:none;padding:0;margin:0">
-<li style="padding:8px 0;border-bottom:1px solid var(--border-subtle);color:var(--text-secondary);font-size:14px">[TO BUILD — Bullet 1]</li>
-<li style="padding:8px 0;border-bottom:1px solid var(--border-subtle);color:var(--text-secondary);font-size:14px">[TO BUILD — Bullet 2]</li>
-<li style="padding:8px 0;border-bottom:1px solid var(--border-subtle);color:var(--text-secondary);font-size:14px">[TO BUILD — Bullet 3]</li>
-<li style="padding:8px 0;color:var(--text-secondary);font-size:14px">[TO BUILD — Bullet 4]</li>
+<h3 style="font-family:'Archivo Black',sans-serif;font-size:14px;letter-spacing:2px;text-transform:uppercase;color:var(--white);margin-bottom:16px">WHAT THE AUDIT SHOWS YOU</h3>
+<p style="font-size:15px;line-height:1.7;color:var(--text-secondary);margin-bottom:16px">Twenty-four questions. Six life categories. Five minutes.</p>
+<ul class="tick-list">
+<li>Your overall score and which of the four tiers you're sitting in right now.</li>
+<li>The exact gaps across morning routine, meal systems, weekend structure, and partner support.</li>
+<li>Your top three priority actions, ranked by where the biggest gaps actually are.</li>
+<li>The quickest wins to start fixing it. Like a Sunday reset.</li>
 </ul>
 </div>
 
@@ -173,9 +188,9 @@ body{font-family:'Lato',sans-serif;font-weight:400;font-size:16px;line-height:1.
 <div class="categories-title">Category Breakdown</div>
 <div id="categoryResults" style="width:100%"></div>
 <div id="ctaSection" class="container" style="display:none;width:100%;margin-top:48px;padding:32px 24px;background:rgba(232,116,12,0.08);border:1px solid var(--amber);border-left:3px solid var(--amber);text-align:center">
-<h3 style="font-family:'Archivo Black',sans-serif;font-size:18px;letter-spacing:2px;text-transform:uppercase;color:var(--white);margin-bottom:12px">[TO BUILD — Copy Project: CTA heading]</h3>
-<p style="font-size:15px;line-height:1.6;color:var(--text-secondary);margin-bottom:24px;max-width:480px;margin-left:auto;margin-right:auto">[TO BUILD — Copy Project: supporting paragraph]</p>
-<a href="https://link.systemisedtoscale.com/widget/booking/y6sN5SUoDqZ98DqeFuhr" target="_blank" rel="noopener" class="btn-primary" style="display:inline-block;text-decoration:none;max-width:400px">[TO BUILD — Button Text]</a>
+<h3 style="font-family:'Archivo Black',sans-serif;font-size:18px;letter-spacing:2px;text-transform:uppercase;color:var(--white);margin-bottom:12px">LET'S HAVE A PROPER CHAT</h3>
+<p style="font-size:15px;line-height:1.6;color:var(--text-secondary);margin-bottom:24px;max-width:480px;margin-left:auto;margin-right:auto">You've got your score. You know the gaps. Now's the time for a proper chat about what to do next.</p>
+<a href="https://link.systemisedtoscale.com/widget/booking/y6sN5SUoDqZ98DqeFuhr" target="_blank" rel="noopener" class="btn-primary" style="display:inline-block;text-decoration:none;max-width:400px">Let's have a chat</a>
 </div>
 <div class="results-footer"><p>TOMMY HOLLAND COACHING</p></div>
 </div>
